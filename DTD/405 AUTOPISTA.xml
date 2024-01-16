@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE paneles [ 
+<!ELEMENT paneles (evento)+>
+<!ELEMENT evento (via,pk,retencion,sentido,carrilescortados?)>
+<!ATTLIST evento tipo CDATA #REQUIRED
+                 fecha CDATA #IMPLIED>
+<!ELEMENT via (nombre,ref,origen,destino,(doble|sentido),carriles)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ref (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT destino (#PCDATA)>
+<!ELEMENT doble EMPTY>
+<!ELEMENT sentido (#PCDATA)>
+<!ELEMENT carriles (#PCDATA)>
+<!ELEMENT pk (#PCDATA)>
+<!ELEMENT retencion ANY>
+<!ATTLIST retencion long CDATA #REQUIRED>
+<!ELEMENT carrilescortados (#PCDATA)>
+<!ATTLIST carrilescortados valor (1|2|3|4) #REQUIRED>
+
+]>
+<paneles>
+    <evento tipo="diurno" fecha="01/01/22">
+      <via>
+        <nombre></nombre>
+        <ref></ref>
+        <origen></origen>
+        <destino></destino>
+        <doble></doble>
+        <carriles></carriles>
+        </via>
+      <pk></pk>
+      <retencion long="666"></retencion>
+      <sentido>SUR</sentido>
+      <carrilescortados valor="1"></carrilescortados>
+    </evento>
+    <evento tipo="nocturno" fecha="01/02/22">
+      <via>
+        <nombre></nombre>
+        <ref></ref>
+        <origen></origen>
+        <destino></destino>
+        <sentido></sentido>
+        <carriles></carriles>
+      </via>
+      <pk></pk>
+      <retencion long="777"></retencion>
+      <sentido>eee</sentido>
+      <carrilescortados valor="2"></carrilescortados>
+    </evento>
+</paneles>
+
