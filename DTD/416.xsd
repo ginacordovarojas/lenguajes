@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
+    <xs:element name="dominio" type="tipob"></xs:element>
+     <xs:simpleType name="tipob">
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-z]{1,}[-]*[0-9]*[a-z]{1,}.[a-z]{2,3}"/>
+                <xs:minLength value="2"/>
+                <xs:maxLength value="63"/>
+            </xs:restriction>
+        </xs:simpleType>  
+</xs:schema>
